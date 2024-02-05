@@ -26,13 +26,15 @@ elem_size_list = [0.5, 0.2, 0.1, 0.05] # element size h
 ana_name = "ana_square_top"
 sumanalys = "FEM_errors.csv"
 
-run_analysis = True
 run_test = True
+run_analysis = True
 
 naming = ["order", "gaussnum", "iterations","volume", "datanum","rmsPoiErr", "errorIndicator",
           "L2norm", "H1seminorm","fluxErr", "orderRefinementCounter"]
 
-error_names = ["L2norm", "H1seminorm", "fluxErr"]
+error_name_list = ["L2norm", "H1seminorm", "fluxErr"]
+error_label_list = [(r'Global error $L^2$-norm'),
+               (r'Global error $H^1$-seminorm'), (r'Global Flux error')]
 ```
 
 ```python
@@ -162,10 +164,11 @@ if run_test:
 ```
 
 ```python
-params.show_file = "out_ori_result"
-params.show_field = "P_reference"
-params.show_edges = True
-show_results(params)
+if run_test:
+    params.show_file = "out_ori_result"
+    params.show_field = "P_reference"
+    params.show_edges = True
+    show_results(params)
 ```
 
 # Convergence analysis
@@ -205,35 +208,41 @@ for i in order_list:
 ```
 
 ```python
-for j in error_names:
-    fig = plt.figure(figsize=(9, 6))
+for (error_name, error_label) in zip(error_name_list,error_label_list):
+    fig = plt.figure()
     ax = plt.axes()
     for i in range(len(order_list)):
-        ax.plot(classic[i]["gaussnum"], classic[i][str(j)], '-x',
+        ax.plot(classic[i]["gaussnum"], classic[i][str(error_name)], '-x',
                 label=('order = ' + str(order_list[i])))
         ax.set_xscale('log')
         ax.legend(loc='best')
         ax.set_yscale('log')
-        ax.set_ylabel(str(j))
+        ax.set_ylabel(error_label)
         ax.set_xlabel("Number of integration points")
-        ax.set_title('Line Diffusion')
         ax.grid(True, ls=':')
+
+    plt.tight_layout()
+    plt.savefig('c2_linear_gauss_' + error_name + '.svg')
+    plt.savefig('c2_linear_gauss_' + error_name + '.png')
 ```
 
 ```python
-for j in error_names:
-    fig = plt.figure(figsize=(9, 6))
+for (error_name, error_label) in zip(error_name_list,error_label_list):
+    fig = plt.figure()
     ax = plt.axes()
     for i in range(len(order_list)):
-        ax.plot(elem_size_list, classic[i][str(j)], '-x',
+        ax.plot(elem_size_list, classic[i][str(error_name)], '-x',
                 label=('order = ' + str(order_list[i])))
         ax.set_xscale('log')
         ax.legend(loc='best')
         ax.set_yscale('log')
-        ax.set_ylabel(str(j))
+        ax.set_ylabel(error_label)
         ax.set_xlabel("Element size")
-        ax.set_title('Line Diffusion')
         ax.grid(True, ls=':')
+
+    plt.tight_layout()
+    plt.savefig('c2_linear_lenghtEle_' + error_name + '.svg')
+    plt.savefig('c2_linear_lenghtEle_' + error_name + '.png')
 ```
 
 ```python
