@@ -1,0 +1,71 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2011,         63]
+NotebookOptionsPosition[      1573,         48]
+NotebookOutlinePosition[      1967,         64]
+CellTagsIndexPosition[      1924,         61]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"u", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Sin", "[", 
+      RowBox[{"Pi", " ", 
+       RowBox[{"(", "x", ")"}]}], "]"}], " ", 
+     RowBox[{"Sinh", "[", 
+      RowBox[{"Pi", " ", 
+       RowBox[{"(", "y", ")"}]}], "]"}]}], ")"}], "/", 
+   RowBox[{"Sinh", "[", "Pi", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.915979853601643*^9, 3.915979871631764*^9}, {
+  3.915982947121595*^9, 3.915982959789379*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"19560807-204f-4374-898e-a83cca761d88"],
+
+Cell[BoxData[
+ RowBox[{"DensityPlot", "[", 
+  RowBox[{"u", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.915979891986384*^9, 3.9159799135236473`*^9}, {
+  3.91598297034804*^9, 3.915982974309702*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"b6b6b15c-eb9b-437a-a4d5-6021bfd26367"]
+},
+WindowSize->{808, 867},
+WindowMargins->{{Automatic, 269}, {Automatic, 40}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3c0b25b9-6e09-4a80-af35-da77098746ae"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 536, 14, 30, "Input",ExpressionUUID->"19560807-204f-4374-898e-a83cca761d88"],
+Cell[1097, 36, 472, 10, 30, "Input",ExpressionUUID->"b6b6b15c-eb9b-437a-a4d5-6021bfd26367"]
+}
+]
+*)
+
