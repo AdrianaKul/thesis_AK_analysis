@@ -2,3 +2,12 @@
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+*.csv
+*.h5m
+*.png
+*.svg
+*.med
+*.vtk
+*.in
+bc.cfg
