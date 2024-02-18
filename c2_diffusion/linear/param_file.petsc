@@ -15,7 +15,7 @@
 -scaling # the dataset/line equation is scaled
 
 # dummy tree parameters
--my_dummy_k 3
+-my_dummy_k 1.0
 -my_dummy_range 4
 -my_dummy_count 10000
 -my_dummy_noise 0
@@ -64,3 +64,14 @@
 -mat_mumps_icntl_24 1
 -mat_mumps_icntl_13 1
 -mat_mumps_icntl_20 0
+
+## Fieldsplit (block) solver
+-pc_type fieldsplit
+-pc_fieldsplit_type multiplicative
+-fieldsplit_0_ksp_type preonly 
+-fieldsplit_0_pc_type lu 
+-fieldsplit_0_ksp_reuse_preconditioner 1
+-fieldsplit_0_pc_factor_mat_solver_type mumps
+-fieldsplit_1_ksp_type preonly 
+-fieldsplit_1_pc_type lu 
+-fieldsplit_1_pc_factor_mat_solver_type mumps 
