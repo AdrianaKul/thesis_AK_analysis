@@ -1,0 +1,77 @@
+-my_order 2
+
+# refinement if available
+-refinement_style 0     # 0 = no refinement; 1 = order refinement; 2 = mesh refinement
+-ref_iter_num 1         # number of refinements desired
+
+# Monte-Carlo
+-monte_carlo 0         # Monte-Carlo statistics, number of perturbations/iterations
+# -perturb_multiplier 10  # multiplier for the perturbation for monte_carlo
+# -monte_patch_number 1   #Monte-Carlo number of integration points for the statistics
+
+# data file
+-csv_tree_file dummy_tree.csv
+# -use_line # use if * parts should be defined by a line rather than a dataset
+-scaling # the dataset/line equation is scaled
+
+# dummy tree parameters
+-my_dummy_k 1.0
+-my_dummy_range 4
+-my_dummy_count 10000
+-my_dummy_noise 0
+
+# 0 for the same seed for tree generation
+-rand_seed 1
+
+# stopping parameters
+-point_dist_tol 1e-10
+# -max_iter 20
+
+# starting fields are random by default
+# -zero_fields # use for 0 beginning fields
+
+# printing results
+-skip_vtk 0     # skip all .h5m and .vtk files (DD); useful for repeating analysis without the need of visualisation 
+# -print_moab   # not recommended for normal analysis
+-print_error    # printing element errors for hdiv part
+-print_integ 0  # printing integration points with * values fot DD part
+# -write_long_error_file      # saving global errors at every iteration to errors_***.csv
+# -skip_all_vtk
+
+# use for square_1D.cub analytical solution
+# -analysis_1D
+
+-pc_type lu
+-pc_factor_mat_solver_package mumps
+-ksp_type fgmres
+-ksp_monitor
+-ksp_converged_reason
+-ksp_rtol 1e-8
+-ksp_atol 1e-8
+
+-snes_atol 1e-12 
+-snes_rtol 1e-12 
+-snes_stol 1e-12 
+-snes_monitor 
+-snes_linesearch_maxstep 0 
+-snes_type newtonls 
+-snes_linesearch_type basic 
+-snes_max_it 150
+#-snes_lag_jacobian 1
+-snes_converged_reason 
+
+-mat_mumps_icntl_14 1600
+-mat_mumps_icntl_24 1
+-mat_mumps_icntl_13 1
+-mat_mumps_icntl_20 0
+
+## Fieldsplit (block) solver
+-pc_type fieldsplit
+-pc_fieldsplit_type multiplicative
+-fieldsplit_0_ksp_type preonly 
+-fieldsplit_0_pc_type lu 
+-fieldsplit_0_ksp_reuse_preconditioner 1
+-fieldsplit_0_pc_factor_mat_solver_type mumps
+-fieldsplit_1_ksp_type preonly 
+-fieldsplit_1_pc_type lu 
+-fieldsplit_1_pc_factor_mat_solver_type mumps 
