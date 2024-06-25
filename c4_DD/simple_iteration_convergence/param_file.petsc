@@ -24,7 +24,7 @@
 -rand_seed 1
 
 # stopping parameters
--point_dist_tol 1e-10
+-point_dist_tol 1e-8
 # -max_iter 20
 
 # starting fields are random by default
