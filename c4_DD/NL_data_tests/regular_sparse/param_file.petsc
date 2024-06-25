@@ -1,4 +1,5 @@
 -my_order 2
+-data_dim 5
 
 # refinement if available
 -refinement_style 0     # 0 = no refinement; 1 = order refinement; 2 = mesh refinement
