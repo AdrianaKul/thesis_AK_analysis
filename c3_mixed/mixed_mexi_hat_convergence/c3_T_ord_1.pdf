@@ -4,7 +4,7 @@
 /Title (PyVista Export)
 /Creator (GL2PS 1.4.2, (C) 1999-2020 C. Geuzaine)
 /Producer (VTK)
-/CreationDate (D:20241004143119)
+/CreationDate (D:20241128165555)
 >>
 endobj
 2 0 obj
@@ -39,37 +39,55 @@ ET
 0 0 0 rg
 BT
 /F1 24 Tf
-185.750000 37.000000 Td
-(0.25) Tj
+141.214279 37.000000 Td
+(0.143) Tj
 ET
 0 0 0 rg
 BT
 /F2 24 Tf
-281.000000 37.000000 Td
-(0.5) Tj
+191.928574 37.000000 Td
+(0.286) Tj
 ET
 0 0 0 rg
 BT
 /F3 24 Tf
-363.250000 37.000000 Td
-(0.75) Tj
+242.642853 37.000000 Td
+(0.429) Tj
 ET
 0 0 0 rg
 BT
 /F4 24 Tf
+293.357147 37.000000 Td
+(0.571) Tj
+ET
+0 0 0 rg
+BT
+/F5 24 Tf
+344.071442 37.000000 Td
+(0.714) Tj
+ET
+0 0 0 rg
+BT
+/F6 24 Tf
+394.785706 37.000000 Td
+(0.857) Tj
+ET
+0 0 0 rg
+BT
+/F7 24 Tf
 468.500000 37.000000 Td
 (1) Tj
 ET
 0 0 0 rg
 BT
-/F5 24 Tf
+/F8 24 Tf
 294.500000 56.000000 Td
 (T) Tj
 ET
 endstream
 endobj
 5 0 obj
-397
+581
 endobj
 6 0 obj
 <<
@@ -99,6 +117,9 @@ endobj
 /F3 12 0 R
 /F4 13 0 R
 /F5 14 0 R
+/F6 15 0 R
+/F7 16 0 R
+/F8 17 0 R
 >>
 >>
 >>
@@ -184,29 +205,59 @@ endobj
 /Encoding /MacRomanEncoding
 >>
 endobj
+15 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F6
+/BaseFont /Helvetica
+/Encoding /MacRomanEncoding
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F7
+/BaseFont /Helvetica
+/Encoding /MacRomanEncoding
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F8
+/BaseFont /Helvetica
+/Encoding /MacRomanEncoding
+>>
+endobj
 xref
-0 15
+0 18
 0000000000 65535 f 
 0000000009 00000 n 
 0000000153 00000 n 
 0000000202 00000 n 
 0000000259 00000 n 
-0000000708 00000 n 
-0000000727 00000 n 
-0000001025 00000 n 
-0000001152 00000 n 
-0000721304 00000 n 
-0000721412 00000 n 
+0000000892 00000 n 
+0000000911 00000 n 
+0000001242 00000 n 
+0000001369 00000 n 
 0000721521 00000 n 
-0000721630 00000 n 
-0000721739 00000 n 
-0000721848 00000 n 
+0000721629 00000 n 
+0000721738 00000 n 
+0000721847 00000 n 
+0000721956 00000 n 
+0000722065 00000 n 
+0000722174 00000 n 
+0000722283 00000 n 
+0000722392 00000 n 
 trailer
 <<
-/Size 15
+/Size 18
 /Info 1 0 R
 /Root 2 0 R
 >>
 startxref
-721957
+722501
 %%EOF
