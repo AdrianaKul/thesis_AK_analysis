@@ -1,5 +1,7 @@
 -my_order 2
 
+-use_part_err_est_int
+
 # refinement if available
 -refinement_style 0     # 0 = no refinement; 1 = order refinement; 2 = mesh refinement
 -ref_iter_num 1         # number of refinements desired
