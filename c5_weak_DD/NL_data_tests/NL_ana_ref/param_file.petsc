@@ -1,5 +1,6 @@
 -my_order 2
 -data_dim 5
+-use_part_err_est_int
 
 # refinement if available
 -refinement_style 0     # 0 = no refinement; 1 = order refinement; 2 = mesh refinement
@@ -25,7 +26,7 @@
 -rand_seed 1
 
 # stopping parameters
--point_dist_tol 1e-10
+-point_dist_tol 1
 # -max_iter 20
 
 # starting fields are random by default
@@ -58,7 +59,7 @@
 -snes_type newtonls 
 -snes_linesearch_type basic 
 -snes_max_it 150
-#-snes_lag_jacobian 1
+-snes_lag_jacobian -2
 -snes_converged_reason 
 
 -mat_mumps_icntl_14 1600
